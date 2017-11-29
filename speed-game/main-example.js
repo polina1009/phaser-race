@@ -4,6 +4,7 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {preload: preload, cre
 function preload() {
     game.load.image('background', 'assets/green-grase.jpg');
     game.load.image('road', 'assets/road.jpg');
+    game.load.image('block', 'assets/stone.png');
     game.load.image('user-car', 'assets/car.png');
     game.load.image('enemy-car', 'assets/enemy-car.png');
 }
@@ -18,6 +19,25 @@ var cursors;
 var moving;
 
 function create() {
+    // game.world.setBounds(-1000, -1000, 2000, 2000);
+    // land = game.add.tileSprite(0, 0, 800, 600, 'background');
+    // land.fixedToCamera = true;
+    // player = game.add.sprite(0, 0, 'car', 'enemy-car');
+    // player.anchor.setTo(0.5, 0.5);
+    // game.physics.enable(player, Phaser.Physics.ARCADE);
+    // player.body.drag.set(0.2);
+    // player.body.maxVelocity.setTo(400, 400);
+    // player.body.collideWorldBounds = true;
+    //
+    // game.camera.follow(player);
+    // game.camera.deadzone = new Phaser.Rectangle(150, 150, 500, 300);
+    // game.camera.focusOnXY(0, 0);
+    //
+    // cursors = game.input.keyboard.createCursorKeys();
+    //
+
+
+
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     land = game.add.tileSprite(0, 0, 1920, 1920, 'background');
@@ -75,9 +95,6 @@ function update() {
     game.physics.arcade.collide(player, turn);
      cursors = game.input.keyboard.createCursorKeys();
      player.body.velocity.x = 0;
-
-
-
 
 
     if (currentSpeed > 0)
