@@ -23,7 +23,7 @@ function create() {
     land = game.add.tileSprite(0, 0, 1920, 1920, 'background');
     //game.world.setBounds(0, 0, 1920, 1920);
 
-    // land.fixedToCamera = true;
+    land.fixedToCamera = true;
 
     player = game.add.sprite(game.world.centerX, game.world.centerY, 'user-car');
     cursors = game.input.keyboard.createCursorKeys();
@@ -31,9 +31,6 @@ function create() {
 
 
 
-
-
-    game.world.setBounds(0, 0, 1920, 1200);
 
     game.add.sprite(0, 0, 'background');
 
@@ -47,15 +44,10 @@ function create() {
 
     }
 
-
-
-
-
-
     road = game.add.group();
     road.enableBody = true;
 
-    track = road.create(0, game.world.height - 665, 'road');
+    track = road.create(0, game.world.height - 65, 'road');
 
     road.scale.setTo(0.5, 0.5);
 
@@ -74,7 +66,7 @@ function create() {
     turn = road.create(1450, 535, 'road');
 
 
-    player = game.add.sprite(10, game.world.height - 940, 'user-car');
+    player = game.add.sprite(10, game.world.height - 305, 'user-car');
     game.physics.arcade.enable(player);
 
 }
@@ -146,9 +138,3 @@ function update() {
 
 }
 
-// function render() {
-//
-//     game.debug.cameraInfo(game.camera, 32, 32);
-//     game.debug.spriteCoords(player, 32, 500);
-//
-// }
