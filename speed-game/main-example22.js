@@ -5,7 +5,7 @@ function preload() {
     game.world.setBounds(0, 0, 1280, 800);
 
     game.load.image('background', 'assets/green-grase.jpg');
-    game.load.image('wall', 'assets/wall12.png');
+    game.load.image('wall', 'assets/5 (1111).png');
     game.load.image('road', 'assets/road.jpg');
     game.load.image('block', 'assets/stone.png');
     game.load.image('user-car', 'assets/car.png');
@@ -77,6 +77,7 @@ function create() {
 
 function update() {
     game.physics.arcade.collide(player, block);
+    game.physics.arcade.collide(player, wall);
 
 
     if (cursors.left.isDown)
