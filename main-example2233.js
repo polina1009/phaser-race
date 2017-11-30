@@ -2,10 +2,7 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {preload: preload, cre
 
 
 function preload() {
-    game.world.setBounds(0, 0, 1280, 800);
-
     game.load.image('background', 'assets/green-grase.jpg');
-    game.load.image('wall', 'assets/wall12.png');
     game.load.image('road', 'assets/road.jpg');
     game.load.image('block', 'assets/stone.png');
     game.load.image('user-car', 'assets/car.png');
@@ -19,18 +16,26 @@ var currentSpeed = 0;
 var cursors;
 var moving;
 var block;
-var wall;
 
 function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     land = game.add.tileSprite(0, 0, 1920, 1920, 'background');
     game.world.setBounds(-1000, -1000, 2000, 2000);
+    //game.world.setBounds(0, 0, 1920, 1920);
+
     land.fixedToCamera = true;
+
     player = game.add.sprite(game.world.centerX, game.world.centerY, 'user-car');
     cursors = game.input.keyboard.createCursorKeys();
+
+
+
+
     game.add.sprite(0, 0, 'background');
+
     cursors = game.input.keyboard.createCursorKeys();
+
     game.input.onDown.add(toggle, this);
 
     function toggle() {
@@ -40,44 +45,66 @@ function create() {
     }
 
 
-    var sprite1 = game.add.sprite(70, 250, 'block');
-    var sprite2 = game.add.sprite(0, 0, 'block').alignTo(sprite1, Phaser.RIGHT_CENTER, 16);
-    var sprite3 = game.add.sprite(0, 0, 'block').alignTo(sprite2, Phaser.TOP_CENTER, 16);
-    var sprite4 = game.add.sprite(0, 0, 'block').alignTo(sprite3, Phaser.RIGHT_CENTER, 16);
-    var sprite5 = game.add.sprite(0, 0, 'block').alignTo(sprite4, Phaser.TOP_CENTER, 16);
-    var sprite6 = game.add.sprite(0, 0, 'block').alignTo(sprite5, Phaser.RIGHT_CENTER, 16);
+    //var sprite1 = game.add.sprite(70, 250, 'block');
+    // var sprite2 = game.add.sprite(0, 0, 'block').alignTo(sprite1, Phaser.RIGHT_CENTER, 16);
+    // var sprite3 = game.add.sprite(0, 0, 'block').alignTo(sprite2, Phaser.RIGHT_CENTER, 16);
+    // var sprite4 = game.add.sprite(0, 0, 'block').alignTo(sprite3, Phaser.RIGHT_CENTER, 16);
+    // var sprite5 = game.add.sprite(0, 0, 'block').alignTo(sprite4, Phaser.RIGHT_CENTER, 16);
+    // var sprite6 = game.add.sprite(0, 0, 'block').alignTo(sprite5, Phaser.RIGHT_CENTER, 16);
+    //sprite1.enableBody = true;
+
+
+    // road = game.add.group();
+    //  road.enableBody = true;
+
+    // track = road.create(0, game.world.height - 65, 'road');
+    //
+    // road.scale.setTo(0.5, 0.5);
+    //
+    // turn = road.create(240, 535, 'road');
+    //
+    // turn = road.create(450, 535, 'road');
+    //
+    // turn = road.create(650, 535, 'road');
+    //
+    // turn = road.create(850, 535, 'road');
+    //
+    // turn = road.create(1050, 535, 'road');
+    //
+    // turn = road.create(1250, 535, 'road');
+    //
+    // turn = road.create(1450, 535, 'road');
 
     block = game.add.group();
     block.enableBody = true;
     var sprite = block.create(190, 0, 'block');
     game.physics.enable(block, Phaser.Physics.ARCADE);
     sprite.body.collideWorldBounds = true;
-    sprite.body.immovable = true;
+    // sprite.body.checkCollision.up = false;
+    // sprite.body.checkCollision.down = false;
+    // sprite.body.immovable = true;
 
-    wall = game.add.group();
-    wall.enableBody = true;
-    var back = wall.create(-300, -300, 'wall');
-    game.physics.enable(wall, Phaser.Physics.ARCADE);
-    back.body.collideWorldBounds = true;
-    back.body.immovable = true;
+    //player = game.add.sprite(10, game.world.height - 305, 'user-car');
 
     player = game.add.sprite(0, 0, 'user-car');
     game.physics.arcade.enable(player);
     player.enableBody = true;
+    // debugger;
     player.body.bounce.setTo(1, 1);
 
+    // game.camera.follow(player);
+    // game.camera.deadzone = new Phaser.Rectangle(150, 150, 500, 300);
+    // game.camera.focusOnXY(0, 0);
+    // game.physics.arcade.collide(player, block);
 
-    game.physics.arcade.enable(player);
-    game.camera.follow(player);
-    game.camera.deadzone = new Phaser.Rectangle(150, 150, 500, 300);
-    game.camera.focusOnXY(0, 0);
+
+
     cursors = game.input.keyboard.createCursorKeys();
 
 }
 
 function update() {
     game.physics.arcade.collide(player, block);
-
 
     if (cursors.left.isDown)
     {
@@ -117,7 +144,9 @@ function update() {
     land.tilePosition.x = -game.camera.x;
     land.tilePosition.y = -game.camera.y;
 
-    // game.physics.arcade.enable([player, enemy-car, killer, block]);
+
+
+
 
     //game.physics.arcade.overlap(player, view.rocketIconGroup, rockets.addRocket, null, rockets);
 }
