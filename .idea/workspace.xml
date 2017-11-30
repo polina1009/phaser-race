@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b2a7df9-8415-4d5a-a544-96e1aec51fd5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/speed-game/assets/stone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/speed-game/main-example11.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/speed-game/main-example22.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/speed-game/main2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speed-game/index.html" afterPath="$PROJECT_DIR$/speed-game/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speed-game/main-example.js" afterPath="$PROJECT_DIR$/speed-game/main-example.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speed-game/main-example22.js" afterPath="$PROJECT_DIR$/speed-game/main-example22.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,41 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-example.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/speed-game/main-example.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main-example11.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/speed-game/main-example11.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1665">
-              <caret line="111" column="5" lean-forward="false" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main-example22.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/speed-game/main-example22.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="110" column="25" lean-forward="true" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/speed-game/main2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="126" column="4" lean-forward="false" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -219,12 +183,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511858372156</updated>
-      <workItem from="1511858373334" duration="46140000" />
+      <workItem from="1511858373334" duration="53104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46140000" />
+    <option name="totallyTimeSpent" value="53104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="724" extended-state="0" />
@@ -348,8 +312,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/speed-game/main-example22.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="110" column="25" lean-forward="true" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+        <state relative-caret-position="344">
+          <caret line="126" column="4" lean-forward="false" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
           <folding />
         </state>
       </provider>

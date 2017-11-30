@@ -1,17 +1,16 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update});
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update, render: render});
 
 
 function preload() {
     game.load.image('background', 'assets/green-grase.jpg');
     game.load.image('road', 'assets/road.jpg');
+    game.load.image('block', 'assets/stone.png');
     game.load.image('user-car', 'assets/car.png');
     game.load.image('enemy-car', 'assets/enemy-car.png');
 }
 
 var land;
 var road;
-var track;
-var turn;
 var player;
 var currentSpeed = 0;
 var cursors;
@@ -44,26 +43,35 @@ function create() {
 
     }
 
-    road = game.add.group();
-    // road.enableBody = true;
 
-    track = road.create(0, game.world.height - 65, 'road');
+    var sprite1 = game.add.sprite(70, 250, 'block');
+    var sprite2 = game.add.sprite(0, 0, 'block').alignTo(sprite1, Phaser.RIGHT_CENTER, 16);
+    var sprite3 = game.add.sprite(0, 0, 'block').alignTo(sprite2, Phaser.RIGHT_CENTER, 16);
+    var sprite4 = game.add.sprite(0, 0, 'block').alignTo(sprite3, Phaser.RIGHT_CENTER, 16);
+    var sprite5 = game.add.sprite(0, 0, 'block').alignTo(sprite4, Phaser.RIGHT_CENTER, 16);
+    var sprite6 = game.add.sprite(0, 0, 'block').alignTo(sprite5, Phaser.RIGHT_CENTER, 16);
 
-    road.scale.setTo(0.5, 0.5);
 
-    turn = road.create(240, 535, 'road');
+    // road = game.add.group();
+    //  road.enableBody = true;
 
-    turn = road.create(450, 535, 'road');
-
-    turn = road.create(650, 535, 'road');
-
-    turn = road.create(850, 535, 'road');
-
-    turn = road.create(1050, 535, 'road');
-
-    turn = road.create(1250, 535, 'road');
-
-    turn = road.create(1450, 535, 'road');
+    // track = road.create(0, game.world.height - 65, 'road');
+    //
+    // road.scale.setTo(0.5, 0.5);
+    //
+    // turn = road.create(240, 535, 'road');
+    //
+    // turn = road.create(450, 535, 'road');
+    //
+    // turn = road.create(650, 535, 'road');
+    //
+    // turn = road.create(850, 535, 'road');
+    //
+    // turn = road.create(1050, 535, 'road');
+    //
+    // turn = road.create(1250, 535, 'road');
+    //
+    // turn = road.create(1450, 535, 'road');
 
 
     //player = game.add.sprite(10, game.world.height - 305, 'user-car');
@@ -115,5 +123,14 @@ function update() {
 
     land.tilePosition.x = -game.camera.x;
     land.tilePosition.y = -game.camera.y;
+
+
+
+
+
+    //game.physics.arcade.overlap(player, view.rocketIconGroup, rockets.addRocket, null, rockets);
 }
 
+function render() {
+    
+}
