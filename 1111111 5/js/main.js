@@ -1,4 +1,6 @@
-var game = new Phaser.Game(1200, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update});
+var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, 'game', {preload: preload, create: create, update: update});
+
+window.innerWidth - 10, window.innerHeight - 10;
 
 function preload() {
     game.load.image('background', 'assets/background-table.jpg');
