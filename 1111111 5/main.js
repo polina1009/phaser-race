@@ -8,13 +8,17 @@ function preload() {
     game.load.spritesheet('pencil-right','assets/pencil-right.png');
     game.load.spritesheet('marker','assets/marker.png');
     game.load.spritesheet('cactus','assets/cactus.png');
+    game.load.spritesheet('sprocket','assets/sprocket.png');
     game.load.spritesheet('clip','assets/clip-1.png');
+    game.load.spritesheet('clip-vert','assets/clip-vert.png');
     game.load.spritesheet('sprocket','assets/sprocket.png');
     game.load.physics("pencil-left-collision","assets/pencil-left-collision.json");
     game.load.physics("pencil-right-collision","assets/pencil-right-collision.json");
     game.load.physics("marker-collision","assets/marker-collision.json");
     game.load.physics("cactus-collision","assets/cactus-collision.json");
+    game.load.physics("sprocket-collision","assets/sprocket-collision.json");
     game.load.physics("clip-collision","assets/clip-collision1.json");
+    game.load.physics("clip-vert-collision","assets/clip-vert-collision.json");
     game.load.physics("player-collision","assets/player-collision.json");
 }
 
@@ -160,12 +164,86 @@ function drawTrack() {
     });
 
     addRealObject({
-        x: 1200,
-        y: 200,
+        x: 1600,
+        y: 400,
         spriteName: 'clip',
         immovable: true,
         collisionName: 'clip-collision',
         collisionSectionName: 'clip-1'
+    });
+
+    addRealObject({
+        x: 600,
+        y: 400,
+        spriteName: 'clip',
+        immovable: true,
+        collisionName: 'clip-collision',
+        collisionSectionName: 'clip-1'
+    });
+
+    addRealObject({
+        x: 1300,
+        y: 1000,
+        spriteName: 'clip',
+        immovable: true,
+        collisionName: 'clip-collision',
+        collisionSectionName: 'clip-1'
+    });
+
+    addRealObject({
+        x: 1600,
+        y: 1000,
+        spriteName: 'clip',
+        immovable: true,
+        collisionName: 'clip-collision',
+        collisionSectionName: 'clip-1'
+    });
+
+
+    addRealObject({
+        x: 1300,
+        y: 400,
+        spriteName: 'clip-vert',
+        immovable: true,
+        collisionName: 'clip-vert-collision',
+        collisionSectionName: 'clip-vert'
+    });
+
+    addRealObject({
+        x: 500,
+        y: 1100,
+        spriteName: 'clip-vert',
+        immovable: true,
+        collisionName: 'clip-vert-collision',
+        collisionSectionName: 'clip-vert'
+    });
+
+
+    addRealObject({
+        x: 1000,
+        y: 250,
+        spriteName: 'sprocket',
+        immovable: true,
+        collisionName: 'sprocket-collision',
+        collisionSectionName: 'sprocket'
+    });
+
+    addRealObject({
+        x: 1500,
+        y: 650,
+        spriteName: 'sprocket',
+        immovable: true,
+        collisionName: 'sprocket-collision',
+        collisionSectionName: 'sprocket'
+    });
+
+    addRealObject({
+        x: 1000,
+        y: 1100,
+        spriteName: 'sprocket',
+        immovable: true,
+        collisionName: 'sprocket-collision',
+        collisionSectionName: 'sprocket'
     });
 }
 
