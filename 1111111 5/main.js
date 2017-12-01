@@ -48,7 +48,7 @@ function create() {
 }
 
 function update() {
-    updateVelocity();
+    //updateVelocity();
 }
 
 function render() {
@@ -69,8 +69,7 @@ function addPlayer() {
 
 function addRealObject(options) {
     var object = game.add.sprite(options.x, options.y, options.spriteName);
-    // пропорционально ужимаем/растягиваем объект
-    // НЕ РАБОТАЕТ после this.chicken.angle = 90;применения физики...
+
     if (options.scale) {
         object.scale.setTo(options.scale, options.scale);
     }
@@ -98,61 +97,68 @@ function addRealObject(options) {
     return object;
 }
 
-function drawWorldBoundaries() {
-    addRealObject({
-        x: 550,
-        y: 160,
-        spriteName: 'pencil-right',
-        immovable: true,
-        collisionName: 'pencil-right-collision',
-        collisionSectionName: 'pencil-right'
-    });
+obj.forEach(function (border) {
+    addRealObject(border)
+});
 
-    addRealObject({
-        x: 1500,
-        y: 160,
-        spriteName: 'pencil-left',
-        immovable: true,
-        collisionName: 'pencil-left-collision',
-        collisionSectionName: 'pencil-left'
-    });
+//obj.forEach(addRealObject);
 
-    addRealObject({
-        x: 550,
-        y: 1300,
-        spriteName: 'pencil-left',
-        immovable: true,
-        collisionName: 'pencil-left-collision',
-        collisionSectionName: 'pencil-left'
-    });
 
-    addRealObject({
-        x: 1500,
-        y: 1300,
-        spriteName: 'pencil-right',
-        immovable: true,
-        collisionName: 'pencil-right-collision',
-        collisionSectionName: 'pencil-right'
-    });
-
-    addRealObject({
-        x: 200,
-        y: 720,
-        spriteName: 'marker',
-        immovable: true,
-        collisionName: 'marker-collision',
-        collisionSectionName: 'marker'
-    });
-
-    addRealObject({
-        x: 1800,
-        y: 720,
-        spriteName: 'marker',
-        immovable: true,
-        collisionName: 'marker-collision',
-        collisionSectionName: 'marker'
-    });
-}
+// function drawWorldBoundaries() {
+//     addRealObject({
+//         x: 550,
+//         y: 160,
+//         spriteName: 'pencil-right',
+//         immovable: true,
+//         collisionName: 'pencil-right-collision',
+//         collisionSectionName: 'pencil-right'
+//     });
+//
+//     addRealObject({
+//         x: 1500,
+//         y: 160,
+//         spriteName: 'pencil-left',
+//         immovable: true,
+//         collisionName: 'pencil-left-collision',
+//         collisionSectionName: 'pencil-left'
+//     });
+//
+//     addRealObject({
+//         x: 550,
+//         y: 1300,
+//         spriteName: 'pencil-left',
+//         immovable: true,
+//         collisionName: 'pencil-left-collision',
+//         collisionSectionName: 'pencil-left'
+//     });
+//
+//     addRealObject({
+//         x: 1500,
+//         y: 1300,
+//         spriteName: 'pencil-right',
+//         immovable: true,
+//         collisionName: 'pencil-right-collision',
+//         collisionSectionName: 'pencil-right'
+//     });
+//
+//     addRealObject({
+//         x: 200,
+//         y: 720,
+//         spriteName: 'marker',
+//         immovable: true,
+//         collisionName: 'marker-collision',
+//         collisionSectionName: 'marker'
+//     });
+//
+//     addRealObject({
+//         x: 1800,
+//         y: 720,
+//         spriteName: 'marker',
+//         immovable: true,
+//         collisionName: 'marker-collision',
+//         collisionSectionName: 'marker'
+//     });
+// }
 function drawTrack() {
     addRealObject({
         x: 1000,
@@ -269,16 +275,6 @@ function updateVelocity() {
             velocity = 0;
         }
     }
-
-    // баг с неостановкой ..не работает
-    // if (Math.abs(player.body.velocity.x) <= 7 && Math.abs(player.body.velocity.y) <= 7) {
-    //     if (velocity > 20) {
-    //         velocity = 0;
-    //     }
-    // }
-
-    // player.body.velocity.x = velocity * Math.cos((player.angle-90)*0.01745);
-    // player.body.velocity.y = velocity * Math.sin((player.angle-90)*0.01745);
 
     player.body.velocity.x = velocity * Math.cos((player.angle)*0.01745);
     player.body.velocity.y = velocity * Math.sin((player.angle)*0.01745);
