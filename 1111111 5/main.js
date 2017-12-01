@@ -1,9 +1,8 @@
-var game = new Phaser.Game(1200, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update, render: render});
+var game = new Phaser.Game(1200, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update});
 
 function preload() {
     game.load.image('background', 'assets/background-table.jpg');
     game.load.image('player', 'assets/player.png');
-    // game.load.image('enemy-car', 'assets/enemy-car.png');
     game.load.spritesheet('pencil-left','assets/pencil-left.png');
     game.load.spritesheet('pencil-right','assets/pencil-right.png');
     game.load.spritesheet('marker','assets/marker.png');
@@ -31,34 +30,25 @@ var block;
 function create() {
     game.physics.startSystem(Phaser.Physics.P2JS);
 
-    // картинка бэкграунда 2048x1536
     land = game.add.tileSprite(0, 0, 2048, 1536, 'background');
     game.world.setBounds(0, 0, 2048, 1536);
 
-    // добавляем игрока
     addPlayer();
-    // рисуем карандаши и маркеры по границам
-    //drawWorldBoundaries();
-    obj.forEach(addRealObject);
-    // рисуем внутренние объекты
-    drawTrack();
-    // камера ездит за игроком
+
+    border.forEach(function (border) {
+        addRealObject(border)
+    });
+    trackObj.forEach(function (obj) {
+        addRealObject(obj)
+    });
+
     workWithCamera();
 
     cursors = game.input.keyboard.createCursorKeys();
-
-    obj.forEach(function (border) {
-        addRealObject(border)
-    });
-
 }
 
 function update() {
     updateVelocity();
-}
-
-function render() {
-
 }
 
 function addPlayer() {
@@ -69,8 +59,6 @@ function addPlayer() {
         collisionName: 'player-collision',
         collisionSectionName: 'player'
     });
-    // player = game.add.sprite(500, 500, 'player');
-    // game.physics.p2.enable(player);
 }
 
 function addRealObject(options) {
@@ -81,181 +69,22 @@ function addRealObject(options) {
         object.scale.setTo(options.scale, options.scale);
     }
 
-    // угол объекта.. не работает
     if (options.angle) {
         object.angle = options.angle;
     }
 
     game.physics.p2.enable(object);
 
-    // делаем неподвижным
     if (options.immovable === true) {
         object.body.kinematic = true;
     }
 
-    // рисуем нормальную границу вместо квадратной
     if (options.collisionName) {
         object.body.clearShapes();
         object.body.loadPolygon(options.collisionName, options.collisionSectionName);
     }
 
-    //object.body.rotateLeft(45);
-
     return object;
-}
-
-
-//obj.forEach(addRealObject);
-
-
-// function drawWorldBoundaries() {
-//     addRealObject({
-//         x: 550,
-//         y: 160,
-//         spriteName: 'pencil-right',
-//         immovable: true,
-//         collisionName: 'pencil-right-collision',
-//         collisionSectionName: 'pencil-right'
-//     });
-//
-//     addRealObject({
-//         x: 1500,
-//         y: 160,
-//         spriteName: 'pencil-left',
-//         immovable: true,
-//         collisionName: 'pencil-left-collision',
-//         collisionSectionName: 'pencil-left'
-//     });
-//
-//     addRealObject({
-//         x: 550,
-//         y: 1300,
-//         spriteName: 'pencil-left',
-//         immovable: true,
-//         collisionName: 'pencil-left-collision',
-//         collisionSectionName: 'pencil-left'
-//     });
-//
-//     addRealObject({
-//         x: 1500,
-//         y: 1300,
-//         spriteName: 'pencil-right',
-//         immovable: true,
-//         collisionName: 'pencil-right-collision',
-//         collisionSectionName: 'pencil-right'
-//     });
-//
-//     addRealObject({
-//         x: 200,
-//         y: 720,
-//         spriteName: 'marker',
-//         immovable: true,
-//         collisionName: 'marker-collision',
-//         collisionSectionName: 'marker'
-//     });
-//
-//     addRealObject({
-//         x: 1800,
-//         y: 720,
-//         spriteName: 'marker',
-//         immovable: true,
-//         collisionName: 'marker-collision',
-//         collisionSectionName: 'marker'
-//     });
-// }
-
-function drawTrack() {
-    addRealObject({
-        x: 1000,
-        y: 700,
-        spriteName: 'cactus',
-        immovable: true,
-        collisionName: 'cactus-collision',
-        collisionSectionName: 'cactus'
-    });
-
-    addRealObject({
-        x: 1600,
-        y: 400,
-        spriteName: 'clip',
-        immovable: true,
-        collisionName: 'clip-collision',
-        collisionSectionName: 'clip-1'
-    });
-
-    addRealObject({
-        x: 600,
-        y: 400,
-        spriteName: 'clip',
-        immovable: true,
-        collisionName: 'clip-collision',
-        collisionSectionName: 'clip-1'
-    });
-
-    addRealObject({
-        x: 1300,
-        y: 1000,
-        spriteName: 'clip',
-        immovable: true,
-        collisionName: 'clip-collision',
-        collisionSectionName: 'clip-1'
-    });
-
-    addRealObject({
-        x: 1600,
-        y: 1000,
-        spriteName: 'clip',
-        immovable: true,
-        collisionName: 'clip-collision',
-        collisionSectionName: 'clip-1'
-    });
-
-
-    addRealObject({
-        x: 1300,
-        y: 400,
-        spriteName: 'clip-vert',
-        immovable: true,
-        collisionName: 'clip-vert-collision',
-        collisionSectionName: 'clip-vert'
-    });
-
-    addRealObject({
-        x: 500,
-        y: 1100,
-        spriteName: 'clip-vert',
-        immovable: true,
-        collisionName: 'clip-vert-collision',
-        collisionSectionName: 'clip-vert'
-    });
-
-
-    addRealObject({
-        x: 1000,
-        y: 250,
-        spriteName: 'sprocket',
-        immovable: true,
-        collisionName: 'sprocket-collision',
-        collisionSectionName: 'sprocket'
-    });
-
-    addRealObject({
-        x: 1500,
-        y: 650,
-        spriteName: 'sprocket',
-        immovable: true,
-        collisionName: 'sprocket-collision',
-        collisionSectionName: 'sprocket'
-    });
-
-    addRealObject({
-        x: 1000,
-        y: 1100,
-        spriteName: 'sprocket',
-        immovable: true,
-        collisionName: 'sprocket-collision',
-        collisionSectionName: 'sprocket'
-    });
 }
 
 function workWithCamera() {
