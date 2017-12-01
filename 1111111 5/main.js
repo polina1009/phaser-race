@@ -38,17 +38,23 @@ function create() {
     // добавляем игрока
     addPlayer();
     // рисуем карандаши и маркеры по границам
-    drawWorldBoundaries();
+    //drawWorldBoundaries();
+    obj.forEach(addRealObject);
     // рисуем внутренние объекты
     drawTrack();
     // камера ездит за игроком
     workWithCamera();
 
     cursors = game.input.keyboard.createCursorKeys();
+
+    obj.forEach(function (border) {
+        addRealObject(border)
+    });
+
 }
 
 function update() {
-    //updateVelocity();
+    updateVelocity();
 }
 
 function render() {
@@ -69,6 +75,7 @@ function addPlayer() {
 
 function addRealObject(options) {
     var object = game.add.sprite(options.x, options.y, options.spriteName);
+
 
     if (options.scale) {
         object.scale.setTo(options.scale, options.scale);
@@ -97,9 +104,6 @@ function addRealObject(options) {
     return object;
 }
 
-obj.forEach(function (border) {
-    addRealObject(border)
-});
 
 //obj.forEach(addRealObject);
 
@@ -159,6 +163,7 @@ obj.forEach(function (border) {
 //         collisionSectionName: 'marker'
 //     });
 // }
+
 function drawTrack() {
     addRealObject({
         x: 1000,
