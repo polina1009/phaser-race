@@ -1,7 +1,5 @@
 var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, 'game', {preload: preload, create: create, update: update});
 
-window.innerWidth - 10, window.innerHeight - 10;
-
 function preload() {
     game.load.image('background', 'assets/background-table.jpg');
     game.load.image('player', 'assets/player.png');
@@ -90,9 +88,13 @@ function addRealObject(options) {
 }
 
 function workWithCamera() {
+    var bounds = 0.3;
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+
     land.fixedToCamera = false;
     game.camera.follow(player);
-    game.camera.deadzone = new Phaser.Rectangle(150, 150, 500, 300);
+    game.camera.deadzone = new Phaser.Rectangle(w*bounds, h*bounds, w*(1-bounds*2), h*(1-bounds*2));
     game.camera.focusOnXY(500, 500);
 }
 

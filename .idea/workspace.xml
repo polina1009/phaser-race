@@ -2,12 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b2a7df9-8415-4d5a-a544-96e1aec51fd5" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1111111 5/borders-config.js" afterPath="$PROJECT_DIR$/1111111 5/js/borders-config.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1111111 5/lib/phaser.min(2).js" afterPath="$PROJECT_DIR$/1111111 5/lib/phaser.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1111111 5/main.js" afterPath="$PROJECT_DIR$/1111111 5/js/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1111111 5/track-objects.js" afterPath="$PROJECT_DIR$/1111111 5/js/track-objects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1111111 5/index.html" afterPath="$PROJECT_DIR$/1111111 5/index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/.idea/1111111 5.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/background-table.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/cactus-collision.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/cactus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/car.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/clip-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/clip-collision1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/clip-vert-collision.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/clip-vert.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/marker-collision.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/pencil-collision.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/pencil-left-collision.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/pencil-left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/pencil-right-collision.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/pencil-right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/player-collision.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/player.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/sprocket-collision.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/assets/sprocket.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/js/borders-config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/js/track-objects.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1111111 5/lib/phaser.min.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,20 +43,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/1111111 5/js/main.js">
+        <entry file="file://$PROJECT_DIR$/phaser-race/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1111111 5/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="475">
+              <caret line="116" column="75" lean-forward="false" selection-start-line="116" selection-start-column="75" selection-end-line="116" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -84,6 +95,7 @@
         <option value="$PROJECT_DIR$/1111111 5/main.js" />
         <option value="$PROJECT_DIR$/1111111 5/index.html" />
         <option value="$PROJECT_DIR$/1111111 5/js/main.js" />
+        <option value="$PROJECT_DIR$/phaser-race/js/main.js" />
       </list>
     </option>
   </component>
@@ -132,7 +144,13 @@
             <path>
               <item name="work" type="b2602c69:ProjectViewProjectNode" />
               <item name="work" type="462c0819:PsiDirectoryNode" />
-              <item name="1111111 5" type="462c0819:PsiDirectoryNode" />
+              <item name="phaser-race" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="work" type="b2602c69:ProjectViewProjectNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="phaser-race" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,20 +195,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
+  <component name="RunManager" selected="JavaScript Debug.index.html (3)">
     <configuration name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/work/1111111/index.html" />
     <configuration name="index.html (2)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/work/1111111 5/index.html" />
+    <configuration name="index.html (3)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/work/phaser-race/index.html" />
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/work/speed-game/index.html" />
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -207,12 +228,12 @@
       <workItem from="1511858373334" duration="62427000" />
       <workItem from="1512046420226" duration="13676000" />
       <workItem from="1512072692076" duration="2840000" />
-      <workItem from="1512116360447" duration="13883000" />
+      <workItem from="1512116360447" duration="14903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92826000" />
+    <option name="totallyTimeSpent" value="93846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="724" extended-state="0" />
@@ -247,22 +268,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/speed-game/main-example22.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speed-game/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1111111/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -501,8 +506,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1111111 5/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="465">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phaser-race/js/track-objects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phaser-race/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="116" column="75" lean-forward="false" selection-start-line="116" selection-start-column="75" selection-end-line="116" selection-end-column="75" />
           <folding />
         </state>
       </provider>
